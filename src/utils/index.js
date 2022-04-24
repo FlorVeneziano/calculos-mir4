@@ -14,12 +14,16 @@ export const formatoMexico = (number) => {
 
 export function cantidadDeItemsEpicos(constante, epicos) {
     let epicosFaltantes = constante - epicos
-
+    if (epicosFaltantes < 0) {
+        epicosFaltantes = 0
+    }
     return epicosFaltantes
 }
 export function cantidadDeItemsRaros(epicosFaltantes, raros) {
     let rarosFaltantes = epicosFaltantes * 10 - raros
-
+    if (rarosFaltantes < 0) {
+        rarosFaltantes = 0
+    }
     return rarosFaltantes
 }
 
